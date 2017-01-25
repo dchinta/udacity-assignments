@@ -7,8 +7,11 @@
 Baseball data from the Dataset options provided by Udacity was used for project. Initial exploratory analysis of the data showed a relationship between batting average and home runs. The batting average did not increase with increase in the number of home runs hit, it seemed to taper off at 0.3. Exploring the data further across handedness of the players, the average home runs scored seemed to be slightly higher for left handed players compared to others.
 
 I landed on two insights from the data 
+
 <b>One:</b> The dimished returns relationship between home runs hit as can be seen from the plot below. 
+
 <b>Two:</b> The higher average home runs hits by left handed players compared to the other. 
+
 I chose to go with highlighting finding number two for this project. After exploring several visualization choices, I went with a bar plot which best described the realtionship between average home runs and handedness of the players.    
 
 ![Home Runs vs Batting Average](/P5/HR_vs_avg.jpeg?raw=true)
@@ -46,7 +49,7 @@ I incorporated the following changes to the visualization post feedback:
 5.	Changed the position of the legend so it’s closer to the plots to lookup to for reference 
 The post feedback version of the plot if as below: 
 
-![Final Visualization](/P5/Final_visualization.png?raw=true)
+![First Visualization](/P5/Final_visualization.png?raw=true)
     
 <b>Further Changes to the Chart</b> 
 
@@ -61,6 +64,8 @@ After further feedback, on a comparison between the area plot and a bar plot, I 
 4. Expanded the legend abbreviations to full form 
 
 The final chart is as below: 
+
+![Final Visualization](/P5/Final_plot.png?raw=true)
 
 
 <b>References:</b> 
