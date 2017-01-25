@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+    <script type="text/javascript">
+      function draw(data) {
+      
+      /*
+        D3.js setup code
+      */
+        // Setting the margins, height and width for creating the svg element 
+          "use strict";
+          var margin = 75,
+              width = 1400 - margin,
+              height = 600 - margin;
+
+             
+        // Creating the svg element and adding title text and formatting  
+          var svg = d3.select("body")
+            .append("svg")
+              .attr("width", width + margin)
+              .attr("height", height + margin)
+            .append('g')
+                .attr('class','chart');  
+
+            svg.append("text")
+                  .attr("x", (width-500)/2)
+                  .attr("y", 20)
+                  .attr("text-anchor", "left")
+                  .style("font-size", "20px")
+                  .style("font-weight", "bold")
+                  .text("Area Plot Comparison of Average Home Runs Between Handedness");
+
+              
+      /*
+        Dimple.js Chart construction code
+      */
+          // Chart element to create the visualization 
+          var myChart = new dimple.chart(svg, data);
+          // Created two axes for "avg" one as category and one as measure 
+          var y = myChart.addMeasureAxis("y","HR"); 
+          var x = myChart.addMeasureAxis("x", "avg");
+          var x2 = myChart.addCategoryAxis("x", ["avg","handedness"]);
+          // Hiding the category x-axis, ordering the measure x-axis and adding formatting to the axes            
+          x2.hidden = true;
+          x2.addOrderRule("HR");
+          x2.tickPeriod = 10;
+          x.tickFormat = ",.2f"; 
+          x.title = "Batting Average";
+          y.title = "Average Home Runs";
+          x.fontSize = 15; 
+          y.fontSize = 15;
+          x.fontFamily = 'serif';
+          y.fontFamily = 'serif';
+
+
+          // Created area plot aggregrated by group average 
+          var mySeries3 = myChart.addSeries(["handedness"],dimple.plot.area,[x2,y]);
+          mySeries3.aggregate = dimple.aggregateMethod.avg
+          
+          
+          // Foramtted legend to increase size and change position 
+          var leg = myChart.addLegend(1000, 100, 500, 20, "left");
+          leg.fontSize = 15;
+          
+          // Mouseover events to highlight the plot area
+          myChart.draw();
+          d3.select("g").selectAll("circle").remove();
+          d3.selectAll('path')
+            .style('opacity', 0.5)
+            .on('mouseover', function(e) {
+              d3.select(this)
+                .style('stroke-width', '3px')
+                .style('opacity', 1)
+         
+          }).on('mouseleave', function(e) {
+              d3.select(this)
+                .style('stroke-width', '2px')
+                .style('opacity', 0.5)
+                
+                
+          });
+
+        };
+      </script>
+  </head>
+<body>
+  <script type="text/javascript">
+  /*
+    Use D3 (not dimple.js) to load the TSV file
+    and pass the contents of it to the draw function
+    */
+  d3.csv("baseball_data1.csv", draw);
+  </script>
+</body>
+</html>
