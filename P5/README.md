@@ -8,9 +8,9 @@ Baseball data from the Dataset options provided by Udacity was used for project.
 
 I landed on two insights from the data 
 
-<b>One:</b> The dimished returns relationship between home runs hit as can be seen from the plot below. 
+<b>One:</b> The diminished returns relationship between home runs hit and batting average as can be seen from the plot below. 
 
-<b>Two:</b> The higher average home runs hits by left handed players compared to the others. 
+<b>Two:</b> The higher average home runs hit by left handed players compared to the others. 
 
 I chose to go with highlighting finding number two for this project. After exploring several visualization choices, I went with a bar plot which best described the realtionship between average home runs and handedness of the players.    
 
