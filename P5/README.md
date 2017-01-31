@@ -1,16 +1,16 @@
 
 
-<h3><b>Baseball data visualization using D3 and Dimple.js</b></h3>
+##__Baseball data visualization using D3 and Dimple.js__
 
-<b>Summary</b> 
+__Summary__ 
 
 Baseball data from the Dataset options provided by Udacity was used for project. Initial exploratory analysis of the data showed a relationship between batting average and home runs. The batting average did not increase with increase in the number of home runs hit, it seemed to taper off at 0.3. Exploring the data further across handedness of the players, the average home runs scored seemed to be slightly higher for left handed players compared to others.
 
 I landed on two insights from the data 
 
-<b>One:</b> The diminished returns relationship between home runs hit and batting average as can be seen from the plot below. 
+__One:__ The diminished returns relationship between home runs hit and batting average as can be seen from the plot below. 
 
-<b>Two:</b> The higher average home runs hit by left handed players compared to the others. 
+__Two:__ The higher average home runs hit by left handed players compared to the others. 
 
 I chose to go with highlighting finding number two for this project. After exploring several visualization choices, I went with a bar plot which best described the realtionship between average home runs and handedness of the players.    
 
@@ -27,7 +27,7 @@ I added title so the visualization and adjusted its position on the graph
 
 I reconsidered the initial design decision of using line charts for showing the average home runs.  The chart showed the peaks for left handed players were higher than the right handed players, red and blue respectively. It also clearly showed the least average among all were both handed players.  I decided to get feedback for this visualization to see if this was good enough. 
 
-<b>Feedback</b> 
+__Feedback__ 
 
 I showed the chart to three people and asked for their feedback and specific comments. I explained what I was trying to accomplish with the visualization, the data that was being used for this purpose and the approached I had considered until then. The following are the main points of their feedback: 
 
@@ -38,7 +38,7 @@ The title is not coherent with the visualization. Overall it a clean graph, I se
 
 3.	I think it would be nice to if I can get some text on hover, such as line legend. Upon closer observation I can the trends for the batsmen. The x-axis is a bit confusing to read. 
 
-<b> Post Feedback changes</b>
+__Post Feedback changes__
 
 I incorporated the following changes to the visualization post feedback: 
 
@@ -51,7 +51,7 @@ The post feedback version of the plot if as below:
 
 ![First Visualization](/P5/Final_visualization.png?raw=true)
     
-<b>Further Changes to the Chart</b> 
+__Further Changes to the Chart__ 
 
 After further feedback, on a comparison between the area plot and a bar plot, I found that a bar plot was more visually explanatory of the insight I was trying to drive home. I made the following additional changes: 
 
@@ -68,7 +68,7 @@ The final chart is as below:
 ![Final Visualization](/P5/Final_plot.png?raw=true)
 
 
-<b>References:</b> 
+__References:__ 
 
 Dimplejs.org
 
