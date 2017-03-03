@@ -7,3 +7,5 @@ Exploratory plots using ggplot library and others
 P5 - Baseball data visualization using D3 and Dimple.js 
 
 P6 - Fraud detection in Enron Financial data  
+
+P7 - A/B Testing of Udacity free trial enrollments 
