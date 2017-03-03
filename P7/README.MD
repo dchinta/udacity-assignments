@@ -1,1 +1,16 @@
 A/B Testing on Udacity Free Trial enrollments 
+
+Baseline Values 
+
+|Metric                                               |Measurement    |
+| ----------------------------------------------------|-------------- |
+| Unique cookies to view page per day                 |40000          |
+| Unique cookies to click "Start free trial" per day  |3200           |
+|Enrollments per day                                  |660            |
+|Click-through-probability on "Start free trial       |0.08           |
+|Probability of enrolling, given click                |0.20625        |
+|Probability of payment, given enroll                 |0.53           |
+|Probability of payment, given click                  |0.1093125      |
+
+
+Final results are in Final Project Results.csv 
